@@ -1,0 +1,9 @@
+{
+    
+    "baseUrl":"https://sports.williamhill.com/betting/en-gb",
+    "viewportHeight":768,
+    "viewportWidth":1320,
+    "defaultCommandTimeout": 80000,
+    "pageLoadTimeout": 80000,
+    "chromeWebSecurity": false
+}
