@@ -10,12 +10,19 @@ describe("Sports Test Cases",()=>{
        cy.get("a").contains(" Football").eq(0).click({force:true})
        cy.get(pageData.DailyList).click({force:true})
        cy.wait(5000)
-    //    cy.focused().invoke("text").then(test=>{
-    //     expect(test).to.equal("Today")
-    //    })
-       cy.get(pageData.Day).invoke("text").then(texts=>{
-       expect(texts).to.equal("Today")
-       })
+ /*
+      cy.get('[data-test-id="Carousel.item-1"]').then(($btn)=>{
+         if($btn.is(":enabled")){
+            cy.log("its active")
+         }
+         else{
+            cy.log("its not active ")
+         }
+      })
+      */
+      cy.get('[data-test-id="Carousel.item-1"]').find("a").eq(1).then(element =>{
+         cy.wrap(element).should('have.class', "top-nav-links__link-dark--active");
+      })
     })
 
     it("Scenario 3",()=>{
